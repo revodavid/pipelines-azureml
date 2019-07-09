@@ -39,7 +39,7 @@ steps:
   inputs:
     azureSubscription: 'azmldemows'
     scriptLocation: inlineScript
-    inlineScript: 'az ml model register -n mymodel -p sklearn_regression_model.pkl -t model.json'
+    inlineScript: 'az ml model register -n mymodel -p sklearn_regression_model.pkl -t model.json -w mlops -g user19demo'
 
 - task: AzureCLI@1
   displayName: 'Deploy model'
